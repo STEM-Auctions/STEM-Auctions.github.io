@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="">
 <head>
     <!-- created by STEM Auctions 2022 -->
 
@@ -8,37 +8,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>STEM Auctions</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="index.js"></script>
 </head>
-<body>
+<body class="text-gray-800 dark:text-gray-50 bg-gray-50 dark:bg-gray-800">
     <!-- navbar -->
-    <nav>
+    <nav class="dark:bg-gray-800 bg-gray-50 rounded-b-sm border-1 border-gray-50">
+        <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+            <div class="relative flex items-center justify-between h-16">
+                <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                </div>
+                <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
+                    <div class="flex-shrink-0 flex items-center">
+                        <h1 class="text-3xl">[Logo Here]</h1>
+                    </div>
+                    <div class="hidden sm:block sm:ml-6">
+                        <div class="flex space-x-4">
+                            <a href="#about"
+                                class="text-gray-800 hover:bg-gray-200 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium">About</a>
+                            <a href="#item-submit"
+                                class="text-gray-800 hover:bg-gray-200 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium">Submit an Item</a>
+                            <a href="rules.html"
+                                class="text-gray-800 hover:bg-gray-200 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium">Rules</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <!-- Mobile menu, show/hide based on menu state. -->
+        <div class="sm:hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                <a href="#about"
+                        class="text-gray-800 hover:bg-gray-200 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium block">About</a>
+                <a href="#item-submit"
+                        class="text-gray-800 hover:bg-gray-200 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium block">Submit an Item</a>
+                <a href="rules.html"
+                    class="text-gray-800 hover:bg-gray-200 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium block">Rules</a>
+            </div>
+        </div>
     </nav>
 
-    <!-- carousel hero w/ images of products (similar to lwsd homepage) -->
-    <seciton>
-
-    </seciton>
-
-    <!-- info -->
-    <section>
-
+    <!-- hero with image -->
+    <section id="hero">
+        <div class="w-screen h-[25rem] bg-cover bg-center bg-[url(https://img.search.brave.com/I-xdm8yT40z-qup38_VK4XWcpS2JB4SlvhqvIPDdTn4/rs:fit:1024:683:1/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vcGhvdG9z/L21vbmV5LXBpY3R1/cmUtaWQ5MjY4Mzgx/Mw)] flex flex-col justify-center items-center">
+            <div class="bg-gray-50 p-3 rounded-md opacity-90 dark:bg-gray-800">
+                <h1 class="text-3xl mx-auto text-center">STEM Auctions</h1>
+                <h3 class="text-lg mx-auto text-center">Slogan goes here</h3>
+            </div>
+        </div>
     </section>
 
-    <!-- how to submit an item -->
-    <section>
+    <!-- everything under the hero -->
+    <section id="content" class="md:ml-[20%] md:mr-[20%]">
+        <!-- info -->
+        <section id="about">
+            <div class="md:ml-8 md:mr-8 ml-2 mr-2 mt-8 dark:bg-gray-800 bg-gray-100 rounded-sm p-3 border-[1px] border-gray-300 dark:border-gray-700">
+                <h2 class="text-2xl text-center"><strong>Information</strong></h2>
+                    <h3 class="text-xl pt-3"><strong>About us</strong></h3>
+                    <p>We are the period 5 business/marketing class</p>
+                    <h3 class="text-xl pt-3"><strong>How the Buying/Selling Process Works</strong></h3>
+                    <p>We take your stuff, sell it, and give you a cut of the profits.</p>
+            </div>
+        </section>
 
+        <!-- how to submit an item -->
+        <section id="item-submit">
+            <div class="md:ml-8 md:mr-8 ml-2 mr-2 mt-8 dark:bg-gray-800 bg-gray-100 rounded-sm p-3 border-[1px] border-gray-300 dark:border-gray-700">
+                <h2 class="text-2xl text-center"><strong>How to Sell an Item</strong></h2>
+                    <h3 class="text-xl pt-3"><strong>Use this form:</strong></h3>
+                    <a href="https://forms.office.com/r/g1eExPaFQg"
+                            class="hover:text-gray-900 dark:text-gray-300 dark:hover:text-white underline">Submit an Item</a>
+                    <h3 class="text-xl pt-3"><strong>We will review your submission</strong></h3>
+                    <p>We take your stuff, sell it, and give you a cut of the profits.</p>
+            </div>
+        </section>
+
+        <!-- how to buy in auction -->
+        <section id="how-to">
+            <div class="md:ml-8 md:mr-8 ml-2 mr-2 mt-8 dark:bg-gray-800 bg-gray-100 rounded-sm p-3 border-[1px] border-gray-300 dark:border-gray-700">
+                <h2 class="text-2xl text-center"><strong>How to Buy an Item</strong></h2>
+                    <h3 class="text-xl pt-3"><strong>Show up to a physical auction!</strong></h3>
+                    <p>Our next auctions are on: </p>
+                    <ul class="list-disc list-inside">
+                        <li>March 28th, 2022 @ Room #</li>
+                        <li>?????</li>
+                    </ul>
+            </div>
+        </section>
+
+        <!-- gallery -->
+        <section>
+            
+        </section>
     </section>
 
-    <!-- how to buy in auction -->
-    <section>
-
-    </section>
-
-    <!-- gallery -->
-    <section>
-        
-    </section>
-
+    <footer>
+        <p class="text-xs m-10 text-center italic">Created by the IT and Marketing teams of STEM Auctions</p>
+    </footer>
 </body>
 </html>
